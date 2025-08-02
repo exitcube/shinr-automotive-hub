@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
-import { Mail, Car, Wrench, Sparkles, Shield } from "lucide-react";
+import { Mail, Phone, Wrench, Sparkles, Shield } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import shinrHero from "@/assets/shinr-hero.jpg";
 
@@ -23,9 +23,9 @@ const ComingSoonBanner = () => {
 
   const features = [
     {
-      icon: Car,
-      title: "Discover",
-      description: "Find your next dream car with premium selection"
+      icon: Phone,
+      title: "24/7 Roadside Assistance",
+      description: "Emergency support whenever and wherever you need it"
     },
     {
       icon: Sparkles,
