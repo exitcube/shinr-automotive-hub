@@ -4,7 +4,7 @@ const AboutApp = () => {
   return (
     <section
       className="
-        relative
+        relative  
         bg-white
         flex flex-col md:flex-row
         items-center justify-between
@@ -27,16 +27,16 @@ const AboutApp = () => {
       >
         {/* Soft background shape */}
         <div
-          className="absolute rounded-[50%] blur-3xl"
-          style={{
-            backgroundColor: "#1FD2B733",
-            width: "686px",
-            height: "580px",         
-            opacity: 1,
-            zIndex: 1,
-          }}
-        ></div>
-
+  className="absolute rounded-full blur-[180px]"
+  style={{
+    background: "radial-gradient(circle, rgba(31,210,183,0.3) 0%, transparent 70%)",
+    width: "900px",
+    height: "900px",
+    top: "-200px",
+    left: "-200px",
+    zIndex: 1,
+  }}
+></div>
         {/* Blended phone image */}
         <img
           src={aboutPhone}
@@ -60,8 +60,8 @@ const AboutApp = () => {
           w-full md:w-1/2
           text-center md:text-left
           space-y-6
-          -mt-[40px] md:-mt-[100px]  // 👈 lift content up
-          md:ml-[40px] lg:ml-[60px]  // 👈 move right only on desktop
+          -mt-[40px] md:-mt-[100px]
+          md:ml-[40px] lg:ml-[60px]
           px-4 sm:px-0
         "
       >
