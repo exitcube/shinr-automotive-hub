@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/shinr-log.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,13 +26,13 @@ const Header = () => {
       <div className="max-w-[1440px] mx-auto w-full px-4 sm:px-8 md:px-10 lg:px-20 py-4 md:py-5">
         <div className="flex items-center justify-between w-full">
         {/* Logo + Brand Name */}
-        <Link to="/" className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-0">
           <img
             src={logo}
             alt="Shinr Logo"
             className="w-8 h-8 object-contain"
           />
-          <span className="text-2xl font-bold text-black">Shinr.</span>
+          <span className="text-2xl font-bold text-[#101010]">shinr<span className="text-[#128C7E]">.</span></span>
         </Link>
 
         {/* Right side - NavLinks + Contact */}
@@ -44,8 +44,8 @@ const Header = () => {
                 key={link.name}
                 to={link.path}
                 className={({ isActive }) =>
-                  `text-gray-600 hover:text-green-600 font-medium transition ${
-                    isActive ? "text-green-600" : ""
+                  `text-gray-600 hover:text-[#128C7E] font-medium transition ${
+                    isActive ? "text-[#128C7E]" : ""
                   }`
                 }
               >
@@ -57,7 +57,7 @@ const Header = () => {
           {/* Contact Button */}
           <Link
             to="/contact"
-            className="hidden md:inline-block bg-[#128C7E] text-white px-5 py-2 rounded-full font-medium hover:bg-green-700 transition"
+            className="hidden md:inline-block bg-[#128C7E] text-white px-5 py-2 rounded-full font-medium hover:bg-black transition"
           >
             Contact
           </Link>

@@ -50,9 +50,9 @@ const HeroSection = () => {
             fontStyle: "normal",
           }}
         >
-          Why <span className="text-[#00A878] font-semibold">Wait</span> in Line?
+          Why <span className="text-[#128C7E] font-semibold">Wait</span> in Line?
           <br />
-          Shine in <span className="text-[#00A878] font-semibold">No Time</span>
+          Shine in <span className="text-[#128C7E] font-semibold">No Time</span>
         </h1>
 
         <p
@@ -99,7 +99,7 @@ const HeroSection = () => {
       rounded-full
       text-sm sm:text-base
       font-medium
-      hover:bg-[#00956F]
+      hover:bg-black
       transition-all duration-200
       flex items-center gap-2
       shadow-md

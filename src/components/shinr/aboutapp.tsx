@@ -66,7 +66,7 @@ const AboutApp = () => {
         "
       >
         <h2 className="text-3xl md:text-4xl font-semibold text-black">
-          About <span className="text-[#00A878]">App</span>
+          About <span className="text-[#128C7E]">App</span>
         </h2>
 
         <h3 className="text-lg font-medium text-[#333]">
@@ -98,12 +98,12 @@ const AboutApp = () => {
 
         <button
           className="
-            bg-[#00A878]
+            bg-[#128C7E]
             text-white
             px-8 py-3
             rounded-full
             text-base font-medium
-            hover:bg-[#00956F]
+            hover:bg-black
             transition-all duration-200
           "
         >

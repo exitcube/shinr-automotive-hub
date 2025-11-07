@@ -1,6 +1,8 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/shinr-log.png";
+import playstore from "../../assets/play store.png"
+import appstore from "../../assets/app store.png"
 
 const Footer = () => {
   return (
@@ -10,23 +12,37 @@ const Footer = () => {
         {/* Logo & App Section */}
         <div>
           <div className="flex items-center space-x-2 mb-4">
-            <img src={logo} alt="Shinr Logo" className="w-[42px] h-[42px]" />
-            <h2 className="text-[32px] font-bold text-white">Shinr</h2>
+            <img src={logo} alt="Shinr Logo" className="w-[42px] h-[45px]" />
+            <h2 className="text-[32px] font-bold text-[#FFFFFF]">shinr<span className="text-[#128C7E]">.</span></h2>
           </div>
 
-          <p className="text-[16px] mb-3">Download app on:</p>
-          <div className="flex flex-col sm:flex-row items-start gap-3">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play"
-              className="h-12"
-            />
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="App Store"
-              className="h-12"
-            />
-          </div>
+<p className="text-[16px] mb-3">Download app on:</p>
+<div className="flex flex-col sm:flex-row items-start gap-3">
+  <a
+    href="/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={playstore}
+      alt="Get it on Google Play"
+      className="h-12 hover:opacity-80 transition"
+    />
+  </a>
+
+  <a
+    href="/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={appstore}
+      alt="Download on the App Store"
+      className="h-12 hover:opacity-80 transition"
+    />
+  </a>
+</div>
+
 
           <p className="text-[16px] mt-4 mb-2">Follow us on</p>
           <div className="flex space-x-4">
@@ -74,9 +90,9 @@ const Footer = () => {
       {/* ====== Mobile View ====== */}
       <div className="sm:hidden flex flex-col px-6 pb-10 text-left">
         {/* Logo */}
-        <div className="flex items-center space-x-2 mb-6">
+        <div className="flex items-center space-x-0 mb-6">
           <img src={logo} alt="Shinr Logo" className="w-[36px] h-[36px]" />
-          <h2 className="text-[26px] font-semibold">Shinr</h2>
+          <h2 className="text-[20px] text-[#FFFFFF] font-semibold">shinr<span className="text-[#128C7E]">.</span></h2>
         </div>
 
         {/* Quick Links & Support - horizontal */}
@@ -126,18 +142,32 @@ const Footer = () => {
           </p>
 
           <div className="flex justify-center items-center gap-4">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Get it on Google Play"
-              className="h-10"
-            />
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="Download on the App Store"
-              className="h-10"
-            />
-          </div>
-        </div>
+  <a
+    href="/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={playstore}
+      alt="Get it on Google Play"
+      className="h-10 hover:opacity-80 transition"
+    />
+  </a>
+
+  <a
+    href="/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src={appstore}
+      alt="Download on the App Store"
+      className="h-10 hover:opacity-80 transition"
+    />
+  </a>
+</div>
+
+      </div>
       </div>
 
       {/* Bottom Bar */}

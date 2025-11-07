@@ -1,4 +1,6 @@
 import React from "react";
+import playstore from "../../assets/play store.png"
+import appstore from "../../assets/app store.png"
 
 const ReadyToGetStarted: React.FC = () => {
   return (
@@ -18,7 +20,7 @@ const ReadyToGetStarted: React.FC = () => {
 
         {/* ✅ Mobile: Single “Download Now” button */}
         <div className="sm:hidden">
-          <button className="bg-white text-black font-semibold px-6 py-3 rounded-md shadow hover:bg-gray-100 transition">
+          <button className="bg-white text-[#128C7E]  font-semibold px-6 py-3 rounded-md shadow hover:bg-black transition">
             Download Now
           </button>
         </div>
@@ -30,7 +32,7 @@ const ReadyToGetStarted: React.FC = () => {
             className="transition-transform duration-300 hover:scale-105"
           >
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              src={playstore}
               alt="Get it on Google Play"
               className="h-12 md:h-14"
             />
@@ -41,7 +43,7 @@ const ReadyToGetStarted: React.FC = () => {
             className="transition-transform duration-300 hover:scale-105"
           >
             <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              src={appstore}
               alt="Download on the App Store"
               className="h-12 md:h-14"
             />

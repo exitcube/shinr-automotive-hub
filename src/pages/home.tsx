@@ -1,11 +1,11 @@
-import HeroSection from "@/components/ui/herosection";
-import AboutApp from "@/components/ui/aboutapp";
-import AppFeatures from "@/components/ui/appfeature";
-import HowItWorks from "@/components/ui/howitworks";
-import ReadyToGetStarted from "@/components/ui/readytogetstarted";
-import CarWashPromo from "@/components/ui/carpromo";
-import ShinrStory from "@/components/ui/shintstory";
-import CommunitySection from "@/components/ui/community";
+import HeroSection from "@/components/shinr/herosection";
+import AboutApp from "@/components/shinr/aboutapp";
+import AppFeatures from "@/components/shinr/appfeature";
+import HowItWorks from "@/components/shinr/howitworks";
+import ReadyToGetStarted from "@/components/shinr/readytogetstarted";
+import CarWashPromo from "@/components/shinr/carpromo";
+import ShinrStory from "@/components/shinr/shintstory";
+import CommunitySection from "@/components/shinr/community";
 
 const Home = () => {
   return (
