@@ -4,7 +4,7 @@ const AboutApp = () => {
   return (
     <section
       className="
-        relative  
+        relative 
         bg-white
         flex flex-col md:flex-row
         items-center justify-between
@@ -29,11 +29,11 @@ const AboutApp = () => {
         <div
   className="absolute rounded-full blur-[180px]"
   style={{
-    background: "radial-gradient(circle, rgba(31,210,183,0.3) 0%, transparent 70%)",
+    background: "radial-gradient(circle, rgba(31,210,183,0.3) 0%, transparent 50%)",
     width: "900px",
     height: "900px",
-    top: "-200px",
-    left: "-200px",
+    top: "0px",
+    left: "0px",
     zIndex: 1,
   }}
 ></div>
