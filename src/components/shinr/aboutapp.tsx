@@ -1,4 +1,5 @@
 import aboutPhone from "../../assets/phone.png";
+import aboutPhone2 from "../../assets/phone-mobile.png";
 
 const AboutApp = () => {
   return (
@@ -14,30 +15,30 @@ const AboutApp = () => {
         font-[Poppins]
         max-w-[1440px]
         gap-16 md:gap-20
-        overflow-hidden
+        overflow-visible
       "
     >
-      {/* Left Side with Background + Image */}
+      {/* Left Phone Section */}
       <div
         className="
           relative w-full md:w-1/2
           flex justify-center md:justify-start items-center
-          -mt-[40px] md:-mt-[80px]   // 👈 lift phone image up (more on desktop)
         "
       >
-        {/* Soft background shape */}
-        <div
-  className="absolute rounded-full blur-[180px]"
-  style={{
-    background: "radial-gradient(circle, rgba(31,210,183,0.3) 0%, transparent 50%)",
-    width: "900px",
-    height: "900px",
-    top: "0px",
-    left: "0px",
-    zIndex: 1,
-  }}
-></div>
-        {/* Blended phone image */}
+        {/* Background glow only behind phone */}
+        <div className="absolute inset-0 flex justify-center md:justify-start items-center">
+          <div
+            className="rounded-full blur-[120px]"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(31,210,183,0.3) 50%, transparent -0%)",
+              width: "600px",
+              height: "600px",
+            }}
+          />
+        </div>
+
+        {/* ✅ Desktop / Tablet Image */}
         <img
           src={aboutPhone}
           alt="Shinr App Preview"
@@ -49,7 +50,23 @@ const AboutApp = () => {
             object-contain
             opacity-95
             drop-shadow-lg
-            md:ml-0
+            hidden md:block
+          "
+        />
+
+        {/* ✅ Mobile Image */}
+        <img
+          src={aboutPhone2}
+          alt="Shinr App Mobile Preview"
+          className="
+            relative
+            z-10
+            w-[260px] sm:w-[320px]
+            h-auto
+            object-contain
+            opacity-95
+            drop-shadow-lg
+            block md:hidden
           "
         />
       </div>
@@ -74,27 +91,27 @@ const AboutApp = () => {
         </h3>
 
         <p
-  className="
-    text-[#000000]
-    text-[16px]
-    leading-[151%]
-    tracking-[0]
-    font-normal
-    max-w-[600px]
-    mx-auto md:mx-0
-    text-justify
-  "
-  style={{
-    fontFamily: "Poppins, sans-serif",
-    fontWeight: 400,
-    fontStyle: "normal",
-  }}
->
-  Shinr is your reliable companion for discovering, booking, and managing car wash services nearby. 
-  Whether you’re relaxing at home, busy at work, or traveling around, Shinr helps you find trusted 
-  washing stations, pick your ideal time slot, and monitor your car’s cleaning progress — all directly 
-  from your phone.
-</p>
+          className="
+            text-[#000000]
+            text-[16px]
+            leading-[151%]
+            font-normal
+            max-w-[600px]
+            mx-auto md:mx-0
+            text-justify
+          "
+          style={{
+            fontFamily: "Poppins, sans-serif",
+            fontWeight: 400,
+            fontStyle: "normal",
+          }}
+        >
+          Shinr is your reliable companion for discovering, booking, and
+          managing car wash services nearby. Whether you’re relaxing at home,
+          busy at work, or traveling around, Shinr helps you find trusted
+          washing stations, pick your ideal time slot, and monitor your car’s
+          cleaning progress — all directly from your phone.
+        </p>
 
         <button
           className="

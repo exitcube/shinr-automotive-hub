@@ -15,24 +15,24 @@ const CarWashPromo: React.FC = () => {
       desc: "Reach thousands of potential customers in your area",
     },
     {
-      icon: dashboardIcon,
-      title: "Smart Dashboard",
-      desc: "Manage bookings, payments, and analytics in one place",
-    },
-    {
       icon: promotionIcon,
       title: "Local Promotion",
       desc: "Get featured in local search results and recommendations",
     },
     {
-      icon: loyaltyIcon,
-      title: "Customer Loyalty",
-      desc: "Build lasting relationships with repeat customers",
-    },
-    {
       icon: offersIcon,
       title: "Special Offers",
       desc: "Create and manage promotional campaigns easily",
+    },
+    {
+      icon: dashboardIcon,
+      title: "Smart Dashboard",
+      desc: "Manage bookings, payments, and analytics in one place",
+    },
+    {
+      icon: loyaltyIcon,
+      title: "Customer Loyalty",
+      desc: "Build lasting relationships with repeat customers",
     },
     {
       icon: timeIcon,
@@ -43,15 +43,12 @@ const CarWashPromo: React.FC = () => {
 
   return (
     <section className="w-full bg-[#E7F4F2] px-6 sm:px-10 md:px-20 py-20 relative overflow-hidden rounded-tl-[120px]">
-      {/* Decorative Background (optional) */}
-      <div
-        className="absolute -top-40 -left-40 w-[700px] h-[700px] rounded-full blur-[0px]"
-        style={{ zIndex: 0 }}
-      ></div>
 
       <div className="relative z-10 flex flex-col xl:flex-row items-start justify-between gap-16 max-w-[1440px] mx-auto">
+
         {/* LEFT CONTENT */}
-        <div className="flex-1 space-y-6 max-w-lg relative z-20">
+        <div className="flex-1 space-y-6 max-w-lg">
+
           <h2 className="font-[Poppins] font-semibold text-[28px] sm:text-[34px] md:text-[40px] xl:text-[48px] leading-[110%] text-gray-900">
             Grow Your Car Wash <br />
             Business with <span className="text-[#128C7E]">Confidence</span>
@@ -61,96 +58,76 @@ const CarWashPromo: React.FC = () => {
             More bookings, smarter tools, and better visibility
           </p>
 
-          {/* Button - Hidden on mobile, shown on larger screens */}
-          <button className="hidden sm:block mt-4 px-7 py-3 bg-[#128C7E] hover:bg-black text-white font-[Poppins] font-medium text-[15px] rounded-lg shadow hover:opacity-90 transition-all">
+          <button className="hidden sm:block mt-4 px-7 py-3 bg-[#128C7E] hover:bg-black text-white font-[Poppins] font-medium text-[15px] rounded-lg transition-all">
             Register Now
           </button>
 
-          {/* FEATURE BOXES */}
-          <div
-            className="
-              grid 
-              grid-cols-1 
-              sm:grid-cols-2 
-              md:grid-cols-2
-              xl:grid-cols-2 
-              gap-x-4
-              sm:gap-x-6
-              md:gap-x-60
-              xl:gap-x-40
-              gap-y-6
-              mt-10
-              justify-items-center
-              sm:justify-items-start
-            "
-          >
+          {/* ✅ MOBILE + TABLET FEATURES */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 gap-x-20 mt-10 ">
+
             {features.map((item, idx) => (
-              <div
-                key={idx}
-                className="
-                  w-full 
-                  sm:w-[250px]
-                  md:w-[350px]
-                  xl:w-[322px]
-                  bg-[#0D4D44] 
-                  sm:bg-[#128C7E]
-                  md:bg-[#128C7E]
-                  rounded-[18px]
-                  md:rounded-[15px]
-                  shadow-md 
-                  hover:shadow-lg 
-                  transition-all 
-                  flex 
-                  flex-col 
-                  justify-center 
-                  p-5 
-                  sm:p-4 
-                  md:p-4
-                  h-[180px] 
-                  sm:h-[250px] 
-                  md:h-[130px]
-                  xl:h-[100px]
-                "
-              >
-                <div className="flex items-center gap-3 mb-2">
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-6 h-6 sm:w-8 sm:h-8 object-contain"
-                  />
-                  <h4 className="font-[Poppins] font-semibold text-[18px] sm:text-[20px] text-white leading-tight">
-                    {item.title}
-                  </h4>
+              <div key={idx} className="relative w-full">
+
+                {/* ✅ MOBILE SHADOW ONLY */}
+                <div className="absolute inset-0 -translate-x-1 translate-y-1 bg-[#128C7E] rounded-[20px] md:hidden"></div>
+
+                {/* ✅ MAIN CARD */}
+                <div
+                  className={`
+                    relative rounded-[20px] p-5 flex flex-col gap-3 
+                    bg-[#0D4D44] md:bg-[#128C7E]
+
+                    /* ✅ Desktop card size */
+                    md:w-[280px]
+                    md:h-[106px]
+                    md:rounded-[14.66px]
+                    md:p-[12px]
+                    md:gap-[4px]
+        
+                  `}
+                >
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={item.icon}
+                      alt={item.title}
+                      className="w-7 h-7 object-contain"
+                    />
+                    <h4 className="font-[Poppins] font-semibold text-[18px] text-white">
+                      {item.title}
+                    </h4>
+                  </div>
+
+                  <p className="font-[Poppins] text-[14px] text-white leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="font-[Poppins] text-[14px] sm:text-[15px] text-white opacity-90 leading-relaxed text-justify">
-                  {item.desc}
-                </p>
+
               </div>
             ))}
+
           </div>
 
-          {/* Button - Shown on mobile, hidden on larger screens */}
-          <button className="block sm:hidden mt-6 px-7 py-3 bg-[#128C7E] hover:bg-black text-white font-[Poppins] font-medium text-[15px] rounded-lg shadow hover:opacity-90 transition-all">
+          <button className="block sm:hidden mt-6 px-7 py-3 bg-[#128C7E] hover:bg-black text-white font-[Poppins] font-medium text-[15px] rounded-lg transition-all">
             Register Now
           </button>
         </div>
 
-        {/* RIGHT IMAGE — visible only on large laptop screens */}
-        <div className="hidden xl:block absolute right-0 bottom-0 z-10">
+        {/* Desktop image */}
+        <div className="hidden xl:block absolute right-0 bottom-0 z-10 h-[100px]">
           <img
             src={dashboard}
             alt="Dashboard Preview"
-            className="object-contain rounded-xl shadow-lg"
+            className="object-contain rounded-xl"
             style={{
-              width: "800px",
-              height: "auto",
+              width: "900px",
               position: "absolute",
-              top: "-500px",
-              right: "-309px",
+              top: "-450px",
+              right: "-150px",
               maxWidth: "50vw",
             }}
           />
         </div>
+
       </div>
     </section>
   );
