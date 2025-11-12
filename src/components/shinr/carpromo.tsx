@@ -42,7 +42,7 @@ const CarWashPromo: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#E7F4F2] px-6 sm:px-10 md:px-20 py-20 relative overflow-hidden rounded-tl-[120px]">
+    <section id="whyshinr" className="w-full bg-[#E7F4F2] px-6 sm:px-10 md:px-20 py-20 relative overflow-hidden rounded-tl-[120px]">
 
       <div className="relative z-10 flex flex-col xl:flex-row items-start justify-between gap-16 max-w-[1440px] mx-auto">
 

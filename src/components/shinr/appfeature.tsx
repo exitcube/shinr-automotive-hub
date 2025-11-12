@@ -35,7 +35,7 @@ const features = [
 
 const AppFeatures = () => {
   return (
-    <section className="relative py-16 lg:py-24 px-6 lg:px-20 font-[Poppins] bg-white overflow-hidden max-w-[1440px] mx-auto">
+    <section id="features" className="relative py-16 lg:py-24 px-6 lg:px-20 font-[Poppins] bg-white overflow-hidden max-w-[1440px] mx-auto">
 
       {/* ✅ Curved background only for large screens */}
       <div

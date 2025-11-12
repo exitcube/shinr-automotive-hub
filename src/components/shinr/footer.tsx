@@ -5,8 +5,8 @@ import playstore from "../../assets/play store.png"
 import appstore from "../../assets/app store.png"
 
 const Footer = () => {
-  return (
-    <footer className="bg-[#322E2E] text-white font-[Poppins] w-full opacity-100">
+  return ( 
+    <footer id="footer" className="bg-[#322E2E] text-white font-[Poppins] w-full opacity-100">
       {/* ====== Desktop View ====== */}
       <div className="hidden sm:grid max-w-[1440px] mx-auto w-full px-8 md:px-10 lg:px-20 py-12 grid-cols-2 md:grid-cols-4 gap-8">
         {/* Logo & App Section */}
@@ -83,6 +83,12 @@ const Footer = () => {
             <li>
               <a href="tel:+919876543210">+91 98765 43210</a>
             </li>
+            <li>
+              <a>Terms & Conditions</a>
+            </li>
+            <li>
+              <a>Help Center / Chat Support</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -124,6 +130,8 @@ const Footer = () => {
             <h3 className="font-semibold mb-2">Contact Info</h3>
             <p>Kochi, Kerala</p>
             <p>+91 98765 43210</p>
+            <p>Terms & Conditions</p>
+            <p>Help Center</p>
           </div>
           <div className="w-1/2 text-[14px]">
             <h3 className="font-semibold mb-2">Follow Us</h3>

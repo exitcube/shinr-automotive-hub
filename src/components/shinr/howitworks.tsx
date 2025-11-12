@@ -1,4 +1,5 @@
 import { Download, MapPin, Calendar, Settings, Gift, CreditCard } from "lucide-react";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -39,6 +40,11 @@ const steps = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const HowItWorks = () => {
   return (
     <section className="relative py-16 md:py-24 px-6 md:px-20 font-[Poppins] bg-white overflow-hidden max-w-[1440px] mx-auto">
@@ -55,27 +61,30 @@ const HowItWorks = () => {
 
         {/* Steps Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 max-w-[1100px] mx-auto">
-          {steps.map((step) => (
-            <div
+          {steps.map((step, index) => (
+            <motion.div
               key={step.id}
-              className="relative bg-[#F5F5F5] rounded-[14px] p-6 text-left shadow-sm hover:shadow-md transition-all duration-300"
+              variants={cardVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ delay: index * 0.15, duration: 0.5, type: "spring" }}
+              className="relative bg-[#F5F5F5] rounded-[14px] p-6 text-left shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-500 cursor-pointer"
             >
               {/* Step Number */}
-              <div className="absolute -top-3 left-4 bg-[#128C7E] text-white font-semibold text-sm px-3 py-1 rounded-md shadow">
+              <div className="absolute -top-3 left-4 bg-[#128C7E] text-white font-semibold text-sm px-3 py-1 rounded-md shadow-lg">
                 {step.id}
               </div>
 
               {/* Icon */}
-              <div className="w-10 h-10 bg-black rounded-md flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-black rounded-md flex items-center justify-center mb-4 group-hover:bg-[#128C7E] transition-colors duration-300">
                 {step.icon}
               </div>
 
               {/* Text */}
-              <h4 className="text-lg font-semibold text-[#128C7E] mb-1">
-                {step.title}
-              </h4>
+              <h4 className="text-lg font-semibold text-[#128C7E] mb-1">{step.title}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">{step.desc}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
